@@ -3,7 +3,7 @@
 |                    |             |
 | ------------------ | ----------- |
 | **Version**        | 0.1         |
-| **Status**         | Draft       |
+| **Status**         | Beta        |
 | **Owner**          | Dave Butler |
 | **Updated**        | 2026-05-21  |
 | **Classification** | Public      |
@@ -122,7 +122,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 regulated deployments of AI agent systems.
 
 To discuss your specific deployment, book a call at
-[aoax.co.uk](https://aoax.co.uk).
+[aoax.co.uk](https://aoax.io).
 
 ---
 
