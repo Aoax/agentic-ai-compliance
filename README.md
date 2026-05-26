@@ -122,7 +122,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 regulated deployments of AI agent systems.
 
 To discuss your specific deployment, book a call at
-[aoax.co.uk](https://aoax.io).
+[aoax.co.uk](https://aoax.co.uk).
 
 ---
 
