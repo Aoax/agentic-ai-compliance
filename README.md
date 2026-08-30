@@ -3,7 +3,7 @@
 |                    |             |
 | ------------------ | ----------- |
 | **Version**        | 0.1         |
-| **Status**         | Beta        |
+| **Status**         | Draft       |
 | **Owner**          | Dave Butler |
 | **Updated**        | 2026-05-21  |
 | **Classification** | Public      |
@@ -17,14 +17,14 @@ emerging orchestrators.
 
 ## Why this exists
 
-AI agent orchestrators — Paperclip, n8n, LangGraph, CrewAI, custom Claude API
-agents — have no built-in compliance frameworks. Their documentation does not
+AI agent orchestrators: Paperclip, n8n, LangGraph, CrewAI, custom Claude API
+agents: have no built-in compliance frameworks. Their documentation does not
 address the obligations that apply when you process personal data, operate in
 regulated sectors, or need to demonstrate governance to auditors.
 
-This repo fills that gap. It maps orchestrator capabilities against UK GDPR, EU
-GDPR, the EU AI Act, ISO 42001, and NIST CSF. Paperclip is the primary reference
-implementation; mappings note where controls are orchestrator-agnostic and where
+This repo fills that gap. It maps orchestrator capabilities against UK and EU
+GDPR today, with the EU AI Act, ISO 42001, and NIST CSF planned. Paperclip is
+the primary reference implementation; mappings note where controls are orchestrator-agnostic and where
 they are Paperclip-specific. It documents what each tool does well, what it does
 not do, and what you need to build or document yourself before you go live with
 real client data.
@@ -49,20 +49,25 @@ environments. Specifically:
 This repo assumes you have an orchestrator running locally and are now asking:
 "What do we need before we can use this with real client data?"
 
-Sector-specific notes are included for fintech (FCA), legal (SRA), and
-healthcare (DSPT, ICO Children's Code).
+The worked example covers a healthcare processor scenario. Sector-specific
+notes for fintech (FCA), legal (SRA), and the rest of healthcare (DSPT, ICO
+Children's Code) are planned, not written.
 
 ---
 
-## What this covers
+## What this covers today
 
-| Framework | Scope                                                             |
-| --------- | ----------------------------------------------------------------- |
-| UK GDPR   | Article-by-article control mapping, gap register, worked examples |
-| EU GDPR   | As UK GDPR; divergences noted where relevant                      |
-| EU AI Act | Risk classification guidance for agentic AI use cases             |
-| ISO 42001 | AI management system controls mapped to agentic deployments       |
-| NIST CSF  | Cybersecurity framework controls for the hosting infrastructure   |
+| Framework | Scope                                                            | Status  |
+| --------- | ---------------------------------------------------------------- | ------- |
+| UK GDPR   | Article-by-article control mapping, gap register, worked example | Written |
+| EU GDPR   | As UK GDPR; divergences noted where relevant                     | Written |
+| EU AI Act | Risk classification guidance for agentic AI use cases            | Planned |
+| ISO 42001 | AI management system controls mapped to agentic deployments      | Planned |
+| NIST CSF  | Cybersecurity framework controls for the hosting infrastructure  | Planned |
+
+Planned means not written. Nothing in this repo covers those three yet, and
+the mapping below cites UK GDPR only. Don't plan an audit around a row marked
+planned.
 
 ---
 
@@ -74,9 +79,8 @@ healthcare (DSPT, ICO Children's Code).
    checkbox is there for a reason.
 3. Review `gap-analysis/agentic-gdpr-gaps.md` and decide which workarounds you
    will implement.
-4. Pick the worked example closest to your scenario and use it as a template.
-5. If you are in a regulated sector, check the relevant sector directory under
-   `frameworks/`.
+4. Read `frameworks/gdpr/worked-example-health-authority-processor.md` if you
+   are operating as a processor; it is the only worked example so far.
 
 Start with the checklist. It will surface the documents and decisions you need.
 
@@ -84,29 +88,27 @@ Start with the checklist. It will surface the documents and decisions you need.
 
 ## Repo structure
 
+What exists:
+
 ```text
 agentic-ai-compliance/
   frameworks/
     gdpr/
       control-mapping.md          # Article-by-article UK GDPR mapping
       worked-example-health-authority-processor.md
-    eu-ai-act/                    # Risk classification and obligations
-    iso-42001/                    # AI management system controls
-    nist-csf/                     # Cybersecurity framework controls
   runbooks/
     deployment-checklist.md       # Pre-go-live compliance checklist
-    incident-response.md          # Breach detection and notification runbook
-    erasure-runbook.md            # Right to erasure workflow
   gap-analysis/
-    agentic-gdpr-gaps.md          # Full gap register with workarounds
-  templates/
-    dpa-template.md               # Data Processing Agreement template
-    ropa-template.md              # Records of Processing Activities template
-    dpia-template.md              # Data Protection Impact Assessment template
-    privacy-notice-template.md    # Article 13/14 privacy notice template
+    agentic-gdpr-gaps.md          # Gap register with workarounds
 ```
 
-Not all directories contain files yet. The gap register tracks what is planned.
+What does not exist yet, and is referenced from the documents above as a
+next step rather than as something you can open today: an incident-response
+runbook, an erasure runbook, and templates for a DPA, ROPA, DPIA, and an
+Art. 13/14 privacy notice. Each is named in the control mapping or the
+deployment checklist as the mitigation for a gap. Until they are written,
+that mitigation is a description of work you have to do yourself, not a
+document you can pick up. Treat those references accordingly.
 
 ---
 
