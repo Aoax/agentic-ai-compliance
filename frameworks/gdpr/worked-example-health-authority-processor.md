@@ -30,7 +30,7 @@ the purposes; it acts only on the HA's documented instructions.
 ### Article 9: Special Category Data
 
 Health data is special category data. The operator does not choose the lawful
-basis — that is the HA's responsibility as DC. The operator must:
+basis: that is the HA's responsibility as DC. The operator must:
 
 - Process only under documented instructions from the HA
 - Implement suitable technical and organisational measures (TOMs)
@@ -48,7 +48,7 @@ process.
 
 ---
 
-### Article 28 — Processor Obligations
+### Article 28: Processor Obligations
 
 A signed DPA must be in place with the HA before any processing begins. The DPA
 must specify:
@@ -59,12 +59,12 @@ must specify:
 
 **Paperclip gap:** None. This is a contractual and governance control.
 
-**Required:** Do not process any HA data before the DPA is signed. Use the DPA
-template in this repo.
+**Required:** Do not process any HA data before the DPA is signed. A DPA
+template for this repo is planned and not written yet.
 
 ---
 
-### Article 28(3)(c) — Sub-processors and LLM API Calls
+### Article 28(3)(c): Sub-processors and LLM API Calls
 
 Paperclip agents make API calls to LLM providers (Anthropic, OpenAI, or
 similar). If patient data appears in agent prompts, the LLM provider is
@@ -98,7 +98,7 @@ Requirements:
 
 ---
 
-### Article 30(2) — Processor Records of Processing Activities
+### Article 30(2): Processor Records of Processing Activities
 
 As a processor, the operator must maintain its own Article 30(2) ROPA entry
 covering:
@@ -110,12 +110,12 @@ covering:
 
 **Paperclip gap:** None. This is a governance record.
 
-**Required:** Create an Article 30(2) entry for each HA engagement. Use the ROPA
-template in this repo.
+**Required:** Create an Article 30(2) entry for each HA engagement. A ROPA
+template for this repo is planned and not written yet.
 
 ---
 
-### Article 32 — Security of Processing
+### Article 32: Security of Processing
 
 Special category health data requires appropriate technical and organisational
 measures. Key controls for a Paperclip deployment:
@@ -130,22 +130,23 @@ measures. Key controls for a Paperclip deployment:
 
 ---
 
-### Article 33 — Breach Notification
+### Article 33: Breach Notification
 
 As a processor, if you become aware of a personal data breach you must notify
 the HA without undue delay. The 72-hour notification clock belongs to the HA as
 DC, but any processor delay eats into that window.
 
 **Required:** A documented incident response process. See
-`runbooks/incident-response.md`.
+an incident-response runbook, which is planned for this repo and not written
+yet.
 
 ---
 
-### Article 22 — Automated Decision-Making
+### Article 22: Automated Decision-Making
 
 If Paperclip agents produce decisions with legal or similarly significant
-effects on patients — routing a referral, flagging a case for escalation, or
-prioritising a care pathway — Article 22 applies. In a health context this
+effects on patients: routing a referral, flagging a case for escalation, or
+prioritising a care pathway: Article 22 applies. In a health context this
 threshold is easily crossed.
 
 **HA responsibility (as DC):** Ensure any automated decision-making has a valid

@@ -12,6 +12,11 @@ Work through this checklist before processing any real personal data on an
 agentic AI stack. Every item is there because a real regulatory obligation or
 audit finding sits behind it.
 
+Several items ask for a document this repo does not yet ship a template for: a
+DPA, a ROPA, a DPIA, a privacy notice, an erasure runbook, an incident-response
+process. Those templates are planned. The checkbox still applies; you are
+writing the document, not filling in ours.
+
 Steps marked "(Paperclip reference implementation)" apply specifically to
 Paperclip. Teams using other orchestrators should apply the equivalent control
 for their stack.

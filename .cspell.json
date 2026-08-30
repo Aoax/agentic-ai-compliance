@@ -1,0 +1,22 @@
+{
+  "version": "0.2",
+  "language": "en-GB",
+  "ignorePaths": ["node_modules"],
+  "words": [
+    "agentic",
+    "AOAX",
+    "DPIA",
+    "DSPT",
+    "fintech",
+    "Healthtech",
+    "IDTA",
+    "LangGraph",
+    "Paperclip",
+    "pseudonymise",
+    "pseudonymised",
+    "Pseudonymisation",
+    "ROPA",
+    "SCCs",
+    "TOMs"
+  ]
+}
